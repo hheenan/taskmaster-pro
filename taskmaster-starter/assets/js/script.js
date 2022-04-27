@@ -81,7 +81,9 @@ $("#task-form-modal .btn-primary").click(function() {
     saveTasks();
   }
 });
-
+$(".list-group").on("click", "p", function() {
+  console.log("this");
+});
 // remove all tasks
 $("#remove-tasks").on("click", function() {
   for (var key in tasks) {
@@ -90,7 +92,6 @@ $("#remove-tasks").on("click", function() {
   }
   saveTasks();
 });
-
 // load tasks for the first time
 loadTasks();
 
